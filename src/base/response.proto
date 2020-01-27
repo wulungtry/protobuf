@@ -1,0 +1,12 @@
+syntax = "proto3";
+package base;
+
+import "google/protobuf/any.proto";
+
+option go_package = "github.com/wulungtry/protobuf/base";
+
+message ResponseBase {
+    int32 status = 1;
+    string message = 2;
+    google.protobuf.Any data = 3;
+}
